@@ -1,5 +1,5 @@
 # app.py
-# This is a test commit
+# This is a test commit to check if the CI pipeline is working correctly.
 def add(a, b):
     return a + b
 
