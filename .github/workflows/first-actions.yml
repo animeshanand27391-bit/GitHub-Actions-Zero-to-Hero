@@ -10,11 +10,11 @@ on:
 
 jobs:
   build:
-    runs-on: self-hosted   # ← was missing this!
+    runs-on: self-hosted
 
     steps:
       - name: Checkout code
-        uses: actions/checkout@v3
+        uses: actions/checkout@v4        # ← upgraded from v3 to v4
 
       - name: Install dependencies
         run: pip3 install pytest
