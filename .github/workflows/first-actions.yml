@@ -11,10 +11,12 @@ on:
 jobs:
   build:
     runs-on: self-hosted
+    env:
+      FORCE_JAVASCRIPT_ACTIONS_TO_NODE24: true   # ← forces bundled node to v24
 
     steps:
       - name: Checkout code
-        uses: actions/checkout@v4        # ← upgraded from v3 to v4
+        uses: actions/checkout@v4
 
       - name: Install dependencies
         run: pip3 install pytest
