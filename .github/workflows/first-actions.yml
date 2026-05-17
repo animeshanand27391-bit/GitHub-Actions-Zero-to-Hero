@@ -1,9 +1,20 @@
+name: Python Tests
+
+on:
+  push:
+    branches:
+      - main
+  pull_request:
+    branches:
+      - main
+
 jobs:
   build:
-    runs-on: self-hosted
+    runs-on: self-hosted   # ← was missing this!
 
     steps:
-      - uses: actions/checkout@v3
+      - name: Checkout code
+        uses: actions/checkout@v3
 
       - name: Install dependencies
         run: pip3 install pytest
